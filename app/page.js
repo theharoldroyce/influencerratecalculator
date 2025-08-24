@@ -91,7 +91,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="flex items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+      <section className="flex items-center justify-center min-h-screen p-4 sm:p-8 md:p-20 pb-20 gap-8 sm:gap-16">
         <div className="container px-4 text-center sm:px-6 md:px-8">
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 sm:gap-5 md:max-w-5xl md:gap-6">
             <h1 className="text-4xl font-extrabold sm:text-5xl md:text-6xl lg:text-7xl">
@@ -103,34 +103,34 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col gap-4 items-center mt-12">
-            <div className="flex gap-2">
+            <div className="flex flex-col sm:flex-row w-full max-w-xl gap-4">
               <FloatingLabelInput
                 id="username"
-                className="w-84 h-12"
+                className="w-full max-w-lg h-12"
                 label="Instagram Username"
                 type="text"
-                value={inputValue || ""}
+                value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
               />
               <FloatingLabelInput
                 id="cpv"
                 label="CPV"
                 type="number"
-                className="w-34 h-12"
-                value={cpv || 0}
+                className="w-full sm-32 h-12"
+                value={cpv}
                 onChange={(e) => setCpv(e.target.value)}
                 step="10"
               />
               <button
                 onClick={handleSearch}
-                className="bg-blue-500 w-42 text-white rounded-lg py-2 px-4 hover:bg-blue-600 transition"
+                className="bg-blue-500 w-full sm:w-40 text-white rounded-lg py-2 px-4 hover:bg-blue-600 transition"
               >
                 Calculate
               </button>
             </div>
           </div>
           <div className="flex flex-col gap-4 items-center mt-12">
-            <div className="flex w-full max-w-2xl gap-2">
+            <div className="flex flex-col sm:flex-row w-full max-w-2xl gap-4">
               {loading && <div>Loading...</div>}
               {error && <div>Error: {error}</div>}
               {!loading && !error && (
