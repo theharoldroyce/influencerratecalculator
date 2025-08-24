@@ -95,6 +95,9 @@ export default function Home() {
         <div className="container px-4 text-center sm:px-6 md:px-8">
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 sm:gap-5 md:max-w-5xl md:gap-6">
             <h1 className="text-4xl font-extrabold sm:text-5xl md:text-6xl lg:text-7xl">
+              Instroom
+            </h1>
+            <h1 className="text-4xl font-extrabold sm:text-5xl md:text-6xl lg:text-7xl">
               Influencer Rate Calculator
             </h1>
             <p className="text-muted-foreground text-balance text-base sm:text-lg md:text-xl">
@@ -106,7 +109,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row w-full max-w-xl gap-4">
               <FloatingLabelInput
                 id="username"
-                className="w-full max-w-lg h-12"
+                className="w-full h-12"
                 label="Instagram Username"
                 type="text"
                 value={inputValue}
