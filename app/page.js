@@ -140,6 +140,16 @@ export default function Home() {
                 <>
                   <Card className="w-full max-w-sm">
                     <CardHeader className="gap-3">
+                      <CardTitle>Total Views of Last 8 Videos</CardTitle>
+                      <CardTitle>
+                        {totalPlayCount.toLocaleString(undefined, {
+                          maximumFractionDigits: 0,
+                        })}
+                      </CardTitle>
+                    </CardHeader>
+                  </Card>
+                   <Card className="w-full max-w-sm">
+                    <CardHeader className="gap-3">
                       <CardTitle>Average Views</CardTitle>
                       <CardTitle>
                         {averagePlayCount.toLocaleString(undefined, {
